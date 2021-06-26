@@ -1,0 +1,49 @@
+#time{
+    margin-top: 24px;
+}
+body{
+    position:relative;
+}
+#topbar{
+    padding: 15%;
+    text-align: center;
+    background-image: url("topbar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: ghostwhite;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+#typeword{position:relative;}
+#typeword::before,
+#typeword::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+}
+
+#typeword::before{
+    animation: typing 2.5s forwards;
+    /*background-image: url("istockphoto-450152019-170667a.jpg");
+    background-repeat: repeat;*/
+    background-color: white;
+    background-size: auto;
+}
+@keyframes typing{
+    from {left: 0%;}
+    to {left: 100%;}
+
+}
+#wrapper {
+    background: radial-gradient(lightskyblue 7.5px, darkslategray 0);
+    background-size: 40px 40px;
+
+}
+
+.pagediv{
+}

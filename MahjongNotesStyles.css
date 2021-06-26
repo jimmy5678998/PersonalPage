@@ -1,0 +1,94 @@
+/*.topbar{
+    margin-top: -20px;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: Azure;
+    padding-bottom: 15px;
+    padding-left: 500px;
+    padding-right: 500px;
+    }
+*/
+body {
+    background-color: powderblue;
+    }
+.topbar{
+    background-image: url("photos/d5y05wf-843cee40-fd8a-4699-9497-b42888f72ccf.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 54%;
+    padding-bottom: 15px;
+    padding-left: 510px;
+    padding-right: 510px;
+    margin-top: -21px;
+    margin-left: -8px;
+    margin-right: -8px;
+    }
+.breakline{
+    border:none;
+    border-top:1px dotted ;
+    color:#000;
+    background-color:#000;
+    height:1px;
+    width:100%;
+    }
+.container {
+    padding: 16px;
+    }
+.categories {
+    text-align: center;
+    word-spacing: 20px;
+    border-style: dotted;
+    }
+.content_list{
+    list-style-type: none;
+    }
+
+.content_list li:before {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-size: 16px;
+  background-image: url("photos/hm2kqk0dkiv31.png");
+  background-repeat: no-repeat;
+  margin-left: -15px;
+  margin-right: 5px;
+}
+.text_1 {
+    padding: 8px 82px 8px 82px;
+    font-size: 19px;
+    text-indent: 50px;
+    }
+
+.text_2 {
+    font-size: 14px;
+    text-indent: 16px
+    }
+.content_text{
+    font-size: 24px;
+    text-indent: 16px;
+    }
+
+.topic {
+    font-size: 50px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
+    background-color: white;
+    border: dotted;
+    width: 100%;
+    position: relative;
+    }
+.tenhou_photo {
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    }
+hr {
+    margin: 1px;
+    border-width: 1px
+    }
+.gallery {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

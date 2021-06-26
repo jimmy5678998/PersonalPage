@@ -1,0 +1,106 @@
+CSS castading style sheet:(Case sensitive) (n = integer)
+Description:
+tell browser how to display the text and other content that you write in HTML.
+controlling:1)color 2)fonts 3)positioning 4)spacing 5)sizing 6)decorations 7)transitions
+3 main ways to apply CSS styling: 1)apply inline styles directly to HTML 2)place CSS rules within style tags 3(recommanded))write CSS rules in an external style sheet
+It is recommanded to use the third way because it can keep styles seperate from the HTML elements, hence improve readability and reusability of your code.
+The idea behind CSSis that you can use a selector to target an HTML element in the DOM(Document Object Model), and then apply a variety of attributes to that element to change the way it is displayed on the page.
+
+
+<h2 style="color:red;"> = applying style to the html element<h2>, it is like a external module and not compulsory to HTML itself. style= giving the style ability to h2, and color:red; giving color red to the text of h2, end with ;.
+
+That is the inline CSS, styling individual CSS element only. By creating <style></style> block, it is more effective to change the way to decorate element.  The example below is a selector for h2 to show the above skill.
+
+e.g.<style> 
+	h2 {
+	color: red;
+	}
+</style>
+<h2>Hello World</h2>
+
+Also applying classes is useful to use CSS.In HTML, giving class to tag is like <h2 class="Hi">, then replace the above h2 with .Hi as example. Mentioning the term in class must be a single word, adding space causes the selector choose another class after the spacing, which treat as two different classes.
+
+font-size: npx; = controlling the font size of the text
+
+font-weight: n = adjust the thickness of characters
+
+font-family: Family name, generic name; = controlling the font type, you can import the external font if you have linked the font decoration before. Family name is for general font, case sensitive and may need quoting, while generic name is optional and is a fallback font if family name font is not avaliable. It don't need case sensitive and quotes as they are CSS keywords.
+
+width: npx; = controlling the width of the element width(usually images)
+
+border-color/width/style/radius: red/npx/solid/npx or n%; = controlling the attributes of border, border-radius is used to round out the corner of border, style adding different effect to it.
+
+background-color: color: = giving the element's background color
+
+color: #fff; = giving the color to the text, #fff means white
+
+#id{styling} = we can style id attributes using CSS and like classes. But if id and classes have conflict on styling(e.g. different width apply on an element), the style of id would be applied due to higher specificity. 
+
+Difference on typing code of classes and id: class is .class{styling} while id is #id{styling}
+
+margin: npx = increading the distance between its border and surrounding elements
+
+margin-bottom: npx; =
+
+padding: npx; = controls the amount of space between the element's content and its border
+
+precedence of taking priority: !important(in css)>inline css>id>class
+
+color code: #000000, two number represents to R, G and B correspondingly. It can use only one number(#000) to represent if we don't need such massive color bandwidth.
+
+RGB code: rgb(0, 0, 0) to 255 maximum. Which can replace color code and color.
+
+css variable(--variable: ;): everything will correspond to the css variable attribute after adding the css tag of this:( xxattribute: var(--variable);), to prevent bugs and error, we will add a fallback value to the attribute after var, which looks like:( xxattribute: var(--variable, fallback-attribute)
+
+:root selector: (;root{--var:x;}) = used to select the matches element and change their attribute. To override this selector, we can change the value in specific element to override it.
+
+text-align: style = aligning the text with different style(e.g. center, left, right, justify)
+
+width: npx = changing the image/words width 
+
+height: npx = changing the image/words height
+
+line-height: npx; = changing the height of each line in block of text(change amount of vertical space of each line of text)
+
+rgba(): rgba stands for:
+  r = red, start at 0~255, same as g and b
+  g = green
+  b = blue
+  a = alpha/level of opacity, start with 0~1, show darker when low opacity,
+which replace instead of hex codes and normal rgb()
+
+box-shadow: offset-x, offset-y, blur-radius, spread-radius, color; = applying shadow with different properties to the box, most likely create shadows with some blur, but mostly transparant black colors.
+
+opacity: 1~0; = to see the item with different transparaency, 0.5 is half see-through, while 1 is opaque.
+
+text-transform: ; = to change the appearance of text. E.g. lowercase, uppercase, capiltalize, initial, inherit, none.
+
+pseudo-class = keyword that can be added to selectors, in order to select a specific state of the element.
+
+:hover {} = pseudo-class selector, it can place a hover state(the cursor hover on certain object) and causes change of attributes.
+
+position: relative; = specify how CSS should move it relative to its current position in the normal flow of the page. It pairs with the CSS offset properties of left or right, and top or bottom. Other elements around it still behave as if that item were in its default position.
+
+position: absolute; = locks the element in place relative to its parent container. Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it. If you forget to add a position rule to the parent item, (this is typically done using position: relative;), the browser will keep looking up the chain and ultimately default to the body tag. There may need extra layout adjustments elsewhere.
+
+position: fixed; = similar to the absolute, but the element will fixed on position that won't move when the user scrolls.
+
+float: left/right/none/inherit; = let the element float to the left or right of container without breaking the flow of document
+
+***
+position vs float(from stack overflow):
+float will not break the document flow -- also, it will position any element it uses the best it can fit in the container width -- say I have 5 x 200px divs in a 800px width container, the last 5th will go in a "new line" below the other ones -- using position:relative will make you need to calculate when it needs to break yourself, and it won't break correctly since the display will either be block and go over the whole width or it will be inline-block or inline which won't render the same way for divs as block would and would pretty much mess up the document flow & layout.
+
+It depends on what you want to do: position:relative is used to move the element a bit aside from it's natural location, whereas float will make it pop to the left-most or right-most position in the parent element. position:absolute will let you position it relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+***
+z-index: n; = to treat the overlapping problem, higher index with have a higher priority to overlap other elements
+
+hsl(0~360, n%, n$) = coloring, hsl correspond to hue, saturation and lightness, hue is like the color line where red in left and blue in right, while here use 0~360 degree to symbolize. While 100% saturation means almost completely gray and saturated. 100% of lightness means white, 50% is normal color. 
+
+background: linear-gradient(gradient_direction(deg), color 1, color 2...); = to create a colour gradient on background
+
+background: repeating-linear-gradient(deg, colour1 npx, colour2 npx...); = repeating linear gradient from one colour to another, form a repeat pattern for the colour provided
+
+url(); = insert url image or text etc..
+
+transform(): scale(n) = to rotate, skew, move, scale the elements

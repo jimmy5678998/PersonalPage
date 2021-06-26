@@ -1,0 +1,77 @@
+Normally, html use a format of <h>inputting text</h> to write.(here h is only an example)
+It has a open tag<h> and a close tag</h>, which involves a backslash.
+Sometimes it will have a self-closing tag, at that time we do not need to add </h>.
+There are a lot of tags in html, and it causes a lot of times to explain.
+If it is not self-closing tag, mostly you can enter some words between tags to show it up. (It will mention when it is self-closing tag)
+
+<!DOCTYPE html> = type this at the start of html, it tells th browser which version of html your page is using, for this, it is HTML5. It is self-closing tag
+
+<html> = type this after <!DOCTYPE html>, it helps to make your html tags works like html
+
+<main> = descriptive tag, meaning the main body of webpage
+
+<head> = descriptive tag, most of the metadata elements like link,meta,title and style go inside it. Markup with information usually go into this tag
+
+<body> = descriptive tag, content of the page usually go into this tag.
+
+<footer> = descriptive tag, mark as footer.
+
+<title> = descriptive tag, type for title.
+
+<h1> ~ <h6> = Titleling in html, h1 has the greatest word size, while h6 is smallest
+
+<p> = paragraph in html, it is like opening a space for you to type a buch of paragraph in it.
+
+<a> = anchor, it is like giving some place to go when you click this sentence, like anchor on ship.
+
+<!-- --> = commenting section
+
+For example of HTML codes:
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+in this sentence, I give an ability to the text bounded by <a> tag, which is "cat photos", when you click this anchored wordings, it will send you to the page you entered in href="", in this case is #, which is a dead link, so it wouldn't send you to anywhere.
+
+Another example:
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+In this case, the link is still dead. But you can see it is not first bounded by<p>, it is not paragraph type. instead, you can see a self-closing tag<img src="">, this will bring you to an image, if the image cannot show, you will see the sentence shows by alt="". When you move the cursor to the photo, it will change to clicker type cursor because of the anchor tag.
+
+href = hyperlink referenced, you can enter the hyperlink after this attribute, you can add a target="_blank" if you want to open a new tab
+While if you want to connect the link inside to the internal section of a page, you need to enter "#" after href(e.g. href="#contacts-header", and it usually uses with<a>, <a href="#contacts-header">Contacts</a>), and when you want to use the link to go to the place you want to mark down, just enter id="the things that is same as after #")
+
+<img src="" alt=""> = self-closing tag, it will insert an image to your html page, and if any problem causes the image cannot shows properly, the sentence after alt will shows up instead.
+
+
+<ul> and <ol> = unordered list and ordered list, it open up a bullet-list section, when you want to add a point, add<li> and </li>
+
+<form action=""> = it send information to the server, mostly combined with input and button tags, after entered the information, it will send you to the webpage that you entered.
+
+<input type="" placeholder=""> = self-closing tag, it provides a bar for you to input,placeholder="" responds to show words inside the bar. If you want people to fill it up before submitting the data, you can just type required inside the tag. Adding value="" will return the value to the server instead of on or off(correspond to whether you enter the text or not). Adding checked causes the boxes of radio and checkbox checked by default.
+
+There are some types of input:
+1) type="text" = entering text for input
+
+2) type="radio" = create radio buttons for multiple options, works with <label>, and you have to mark it with name="", same name causes the input option in the same multiple options list. Selecting one option will deselect other options as to provide only one answer to user.
+
+3) type="checkbox" = create checkboxes that can be multiply chosen, quite the same as type="radio" 
+
+
+<button type=""> = it creates a button, type="submit" if you want to send data to the server.
+
+<label> = works with input type="radio" and "checkbox", adding for="" can help to build a linking between label and input option if the id="" in input and for="" are the same
+
+<... class="class-1 class-2"> = applying class to element, useful in CSS decorations, the spacing separating multiple classes
+
+id attributes(id="") = building up an id for the element. There are several benefits to use id attributes:
+1) style a single element, so we can select and modify the specific elements with JavaScript
+2) id attributes should be unique, it is the best to give different id to different elements. But it is fine and browser can still understand and apply even we don't do so.
+
+<span> = incline container to mark up a part of text, without opening a new line.
+
+<strong> = draw attendtion by bolding the font, equals to css of font-weight: bold;
+
+<u> = underlining the words that are important, equals to css of text-decoration: underline;
+
+<em> = italicized the text, equals to css of font-style: italic;
+
+<s> = indicating the text is no longer valid, equals to css of text-decoration: line-through;
+
+<hr> = add a horizontal line across the width of its containing element. Use in defining a change in topic or visually separate groups of content. It is a self-closing tag.

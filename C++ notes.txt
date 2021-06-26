@@ -1,0 +1,81 @@
+How C++(programming language) works?
+1. write programme with an editor
+2. save file to correct format
+3. compiler the program with suitable compiler(g++ in this case) to get translated machine codes
+4. works with library file of that language in order to run the program
+5. use linker program to change the machine code and necessary part of C++ to excutable file(exe.), which can work even exit C++ development environment
+
+Formats:
+.cpp = format of C++
+.h/.hpp = header files of user-defined library(standard C++ library header files have no file suffix)
+------
+Resources:
+Data type of C++:
+https://www.w3schools.com/cpp/cpp_data_types.asp
+
+Operand Coercion(using truncation for C++ instead of rounding):
+https://www.learncpp.com/cpp-tutorial/implicit-type-conversion-coercion/
+
+Unsigned number overflow:
+https://www.learncpp.com/cpp-tutorial/unsigned-integers-and-why-to-avoid-them/
+------
+Symbols Explaination:
+# = indicates the following line is a preprocessor directive and should be processed by the preprocessor before compilation by the compiler
+"" = (1)start and end of the user-defined library header file name to be included. (2)represent character strings(sequence of char data)
+'' = representing characters(single char data type)
+< > = start and end of the standard C++ library header file name to be included.
+:: = (1)global scope (2)class scope (3)namespace scope
+++/-- = increment/decrement operator(C++ only, which has pre/post usage)
+<< = insertion operator
+>> = extraction operator
+\ = escape sequence
+|| = or operator
+&& = and operator
+%/mod = modulo operator(to get the remainder of the integral division)(for mod: mod(17,5) or 17mod5 or 17%5)
+? = if-else operator(e.g. (<bool-exp>)?<then-exp>:<else-exp>;
+------
+Functions:
+#include = a preprocessor directive that tells the preprocessor to include header files in the program, include information of a library(a collection of sub-programs)
+
+<iostream> = a header file that that contains functions for I/O(input/ output) operations(cin and cout)
+
+<cmath> = a header file that contain ceil() function\
+
+<string> = a header file that allows to use string data type
+
+namespace = featire of C++, we cannot have variables, functions, etc with the same name, to avoid the conflict, we use namespace, so to have the same variable while declaring different name before it with ::
+
+std = abbreviaton for standard
+
+using = using the function inside modules, we can explictly mention what element is required(e.g. using namespace std means that using function that can be searched in standards if there are no explictly mentioned function)
+
+cin = object that input and read, from files or keyboard etc
+
+cout = object that output to screen or file, can send string and numbers to it(string works with "")
+
+cerr = object that print out error message to screen or file
+
+endl = end of line marker, using it change things to next row
+
+return = to return a value 
+
+main() = the one and only one main function in C++, every program must have it
+
+boolalpha = to print true or false when output is boolean, works with cout
+
+noboolalpha = to print 1 or 0 when output is boolean, works with cout
+
+static_cast<data-type>(value) = convert type in order to treat narrowing conversion
+
+const = make the value constant, use before <data-type><identifier>, must write in capital letters
+
+f(suffix) = indicating the number is a float(when default as other data type e.g. double when 3.00)
+
+ceil() = to return integer that is rounding up
+
+pow() = to use exponential function(e.g. pow(3,5)=3^5)
+
+sqrt = square root function(e.g. sqrt(3))
+------
+examples:
+int main(){...\nreturn0;} = define a function call main to returns an integer with value 0 in the end, which indicating the program finished successfully.
